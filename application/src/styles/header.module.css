@@ -2,16 +2,30 @@
 .header {
     background-color: #673ab7;
     /* Purple background */
-    color: #ffffff;
     display: flex;
     justify-content: space-between;
+    /* Space out the logo and other elements */
+    align-items: center;
+    /* Vertically center all children */
     padding: 0.5rem 1rem;
+    /* Adjust padding as needed */
+    color: #ffffff;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+    /* Additional styling for the logo if needed */
+}
+
+.searchBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    /* Adjust the width as needed */
 }
 
 .searchInput {

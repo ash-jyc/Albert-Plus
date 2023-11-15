@@ -1,16 +1,35 @@
 /* components/chat.module.css */
 .chatContainer {
-    background-color: #ffffff;
-    /* White background */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    /* Light shadow for depth */
-    padding: 1rem;
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    height: 400px;
-    /* Fixed height, can be adjusted */
+    max-width: 350px;
+    /* Adjust width as needed */
+    height: 100%;
+    /* Full height of parent container */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    /* Add margin if necessary */
+}
+
+.chatHeader {
+    background-color: #673ab7;
+    /* Matching the Academic Pathway header */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-top-left-radius: 8px;
+    /* Rounded corners at the top */
+    border-top-right-radius: 8px;
+}
+
+.messagesContainer {
+    flex-grow: 1;
+    overflow-y: auto;
+    /* Allows for scrolling */
+    padding: 1rem;
 }
 
 .messages {
@@ -21,13 +40,35 @@
 }
 
 .message {
-    background-color: #eeeeee;
-    /* Light gray for message bubbles */
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    margin-bottom: 0.5rem;
     max-width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    word-wrap: break-word;
 }
+
+.pathfinderMessage {
+    background-color: #f0f0f0;
+    /* Lighter background for Pathfinder */
+    align-self: flex-start;
+    /* Align to the left */
+    margin-right: auto;
+    /* Pushes the message to the left */
+}
+
+.userMessage {
+    background-color: #673ab7;
+    /* Different background color for the user */
+    color: white;
+    /* Text color for the user messages */
+    align-self: flex-end;
+    /* Align to the right */
+    margin-left: auto;
+    /* Pushes the message to the right */
+}
+
+/* ... additional styles */
+
 
 /* Styles for the message input area */
 .inputArea {

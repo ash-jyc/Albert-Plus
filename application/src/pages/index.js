@@ -5,14 +5,15 @@ import SearchResults from '../components/search-results';
 import AcademicPathway from '../components/academic-pathway';
 import Chat from '../components/chat';
 import Footer from '../components/footer';
+import styles from '../styles/home.module.css';
 
 export default function Home() {
   // Default search results data
   const searchResultsData = [
-    'Intro to ICDS', 
-    'Data Structures', 
-    'Algorithms', 
-    'Operating Systems', 
+    'Intro to ICDS',
+    'Data Structures',
+    'Algorithms',
+    'Operating Systems',
     'Web Development'
   ];
 
@@ -46,14 +47,18 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <>
       <Header />
-      <main>
-        <SearchResults results={searchResults} />
-        <AcademicPathway courses={courses} />
-        <Chat messages={messages} onSendMessage={handleSendMessage} />
-      </main>
+      <SearchResults results={searchResults} />
+      <div className={styles.mainContainer}>
+        <div className={styles.academicPathwayContainer}>
+          <AcademicPathway courses={courses} />
+        </div>
+        <div className={styles.chatContainer}>
+          <Chat messages={messages} onSendMessage={handleSendMessage} />
+        </div>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

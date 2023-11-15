@@ -1,0 +1,22 @@
+/* styles/Home.module.css */
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    /* Space out the child components */
+    padding: 20px;
+}
+
+.academicPathwayContainer {
+    flex-grow: 1;
+    /* Takes up as much space as possible */
+    margin-right: 20px;
+    /* Add some space between the pathway and chat */
+}
+
+.chatContainer {
+    width: 300px;
+    /* Or any other fixed width you prefer */
+    flex-shrink: 0;
+    /* Prevents the chat container from shrinking */
+    /* Add additional styling for the chat container */
+}

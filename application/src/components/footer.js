@@ -4,11 +4,11 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.downloadLinks}>
+      {/* <div className={styles.downloadLinks}>
         <a href="#">Download from App Store</a>
         <a href="#">Download from Google Play</a>
         <a href="#">Download from AcademicPia</a>
-      </div>
+      </div> */}
       <div className={styles.contactInfo}>
         <p>Need Help? Our support team is available</p>
         <p>📞 (123) 000-1111</p>

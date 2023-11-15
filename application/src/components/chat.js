@@ -14,11 +14,21 @@ const Chat = ({ messages, onSendMessage }) => {
   };
 
   return (
-    <div className={styles.chatContainer}>
-      <div className={styles.messages}>
+    <aside className={styles.chatContainer}>
+      <div className={styles.chatHeader}>
+        Chat with PathFinder
+      </div>
+      <div className={styles.messagesContainer}>
         {messages.map((message, index) => (
-          <div key={index} className={styles.message}>
-            <strong>{message.sender}:</strong> {message.text}
+          <div
+            key={index}
+            className={`${styles.message} ${
+              message.sender === 'PathFinder'
+                ? styles.pathfinderMessage
+                : styles.userMessage
+            }`}
+          >
+            {message.text}
           </div>
         ))}
       </div>
@@ -32,7 +42,9 @@ const Chat = ({ messages, onSendMessage }) => {
         />
         <button type="submit" className={styles.sendButton}>Send</button>
       </form>
-    </div>
+    </aside>
+
+    
   );
 };
 
